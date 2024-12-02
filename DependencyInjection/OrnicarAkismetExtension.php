@@ -17,9 +17,6 @@ class OrnicarAkismetExtension extends Extension
 {
     /**
      * Loads and processes configuration to configure the Container.
-     *
-     * @param array $configs
-     * @param ContainerBuilder $container
      */
     public function load(array $configs, ContainerBuilder $container)
     {

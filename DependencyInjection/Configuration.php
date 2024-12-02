@@ -13,22 +13,11 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-    /**
-     * Generates the configuration tree.
-     *
-     * @return TreeBuilder
-     */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('ornicar_akismet');
-        if (\method_exists($treeBuilder, 'getRootNode')) {
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('ornicar_akismet', 'array');
-        }
 
-         $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('url')->isRequired()->end()
                 ->scalarNode('api_key')->isRequired()->end()
