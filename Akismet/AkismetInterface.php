@@ -12,7 +12,7 @@ interface AkismetInterface
     /**
      * Returns true if Akismet believes the data is a spam
      *
-     * @param array data only the model data. The request data is added automatically.
+     * @param array $data only the model data. The request data is added automatically.
      *        Exemple:
      *        array(
      *            'comment_author' => 'Jack',
@@ -26,7 +26,7 @@ interface AkismetInterface
     /**
      * This call is for submitting comments that weren’t marked as spam but should have been.
      *
-     * @param array data only the model data. The request data is added automatically.
+     * @param array $data only the model data. The request data is added automatically.
      *        Exemple:
      *        array(
      *            'comment_author' => 'Jack',
