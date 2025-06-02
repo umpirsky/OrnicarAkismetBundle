@@ -44,7 +44,7 @@ class AkismetReal implements AkismetInterface
      * @param boolean $throwExceptions if false, exceptions are just ignored
      * @param LoggerInterface|null $logger
      */
-    public function __construct(AkismetAdapterInterface $adapter, RequestStack $requestStack, $throwExceptions, LoggerInterface $logger = null)
+    public function __construct(AkismetAdapterInterface $adapter, RequestStack $requestStack, $throwExceptions, ?LoggerInterface $logger = null)
     {
         $this->adapter = $adapter;
         $this->requestStack = $requestStack;
